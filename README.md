@@ -12,10 +12,12 @@ AssetCompress is available at [github](http://github.com/markstory/asset_compres
 
 ### Installation
 
+#### Classic libraries loading
+
 In your bootstrap.php make sure you include the plugin
 
 	CakePlugin::load('Knockback');
-	
+
 Make sure you add set the correct files in  your compress_asset.ini
 This asset compress config also stored in Config folder of knockback plugin.
 
@@ -23,24 +25,24 @@ This asset compress config also stored in Config folder of knockback plugin.
 	paths[] = APP/Plugin/Knockback/
 
 	[knockback-base-release.js]
-	files[] = jquery-1.8.1.min.js
-	files[] = underscore-1.3.3.min.js
-	files[] = backbone-0.9.2.min.js
-	files[] = knockout-2.1.0.min.js
-	files[] = knockback-0.15.4.min.js
+	files[] = jquery/jquery.min.js
+	files[] = underscore/underscore.min.js
+	files[] = backbone/backbone.min.js
+	files[] = knockout/knockout.min.js
+	files[] = knockback/knockback.min.js
 
 	[knockback-base-develop.js]
-	files[] = jquery-1.8.1.min.js
-	files[] = underscore-1.3.3.js
-	files[] = backbone-0.9.2.js
-	files[] = knockout-2.1.0.js
-	files[] = knockback-0.15.4.js
+	files[] = jquery/jquery.min.js
+	files[] = underscore/underscore.js
+	files[] = backbone/backbone.js
+	files[] = knockout/knockout.min.js
+	files[] = knockback/knockback.js
 
-You can then show that you are going to use the Knockback component and 
+You can then show that you are going to use the Knockback component and
 asset compress helper in your controllers.
 
 	var $helpers = array('AssetCompress.AssetCompress');
-	
+
 	public $components = array (
 		'RequestHandler',
 		'Knockback.Knockback'
@@ -50,6 +52,16 @@ Then add the knockback files to your view or layout.
 
 	<?php echo $this->AssetCompress->script('knockout-base-release'); ?>
 
-Or	
+Or
 
 	<?php echo $this->AssetCompress->script('knockout-base-develop'); ?>
+
+	
+#### Libraries loading using  Asynchronous Module Definition with RequireJS.
+
+In webroot/js/sample/requirejs.loader.js provided loader for RequireJS that describe all libraries locations.
+
+RequireJS initialized using next script:
+
+	<script data-main="js/requirejs.loader" src="/knockback/js/requirejs/require.js"></script> 
+	
