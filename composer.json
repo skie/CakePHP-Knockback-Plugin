@@ -1,0 +1,25 @@
+{
+  "name": "raulmangolin/cakephp-knockback-plugin",
+  "type": "cakephp-plugin",
+  "description": "CakePHP Knockback plugin",
+  "keywords": ["cakephp", "knockback", "plugin", "knockback js"],
+  "homepage": "https://github.com/raulmangolin/CakePHP-Knockback-Plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name":"Evgeny Tomenko",
+      "homepage":"https://github.com/skie"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "ext-curl": "*",
+    "ext-mbstring": "*",
+    "ext-fileinfo": "*",
+    "composer/installers": "*",
+    "markstory/asset_compress": "*"
+  },
+  "support": {
+    "source": "https://github.com/raulmangolin/CakePHP-Knockback-Plugin"
+  }
+}
