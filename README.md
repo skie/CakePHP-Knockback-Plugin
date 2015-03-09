@@ -12,6 +12,19 @@ AssetCompress is available at [github](http://github.com/markstory/asset_compres
 
 ### Installation
 
+Installation
+------------
+
+#### Composer
+
+```json
+{
+    "require": {
+        "raulmangolin/cakephp-knockback-plugin": "dev-master"
+    }
+}
+```
+
 #### Classic libraries loading
 
 In your bootstrap.php make sure you include the plugin
