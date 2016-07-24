@@ -9,8 +9,18 @@ In order to have the base files automatically loaded you need to install Mark St
 
 AssetCompress is available at [github](http://github.com/markstory/asset_compress)
 
+Installation
+------------
 
-### Installation
+#### Composer
+
+```json
+{
+    "require": {
+        "raulmangolin/cakephp-knockback-plugin": "dev-master"
+    }
+}
+```
 
 #### Classic libraries loading
 
